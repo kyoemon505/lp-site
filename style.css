@@ -1,0 +1,100 @@
+:root {
+  --ink: #17231d;
+  --muted: #5e6d64;
+  --paper: #fbfbf6;
+  --leaf: #25734a;
+  --leaf-dark: #154c35;
+  --mint: #dceee0;
+  --lime: #b7d96d;
+  --gold: #d8b04f;
+  --line: rgba(23, 35, 29, 0.14);
+  --white: #ffffff;
+  --shadow: 0 22px 60px rgba(26, 54, 38, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif;
+  line-height: 1.75;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  min-height: 72px;
+  padding: 14px clamp(18px, 4vw, 56px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(251, 251, 246, 0.92);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50% 50% 8px;
+  background: linear-gradient(135deg, var(--leaf), var(--lime));
+  transform: rotate(-18deg);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(14px, 3vw, 32px);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a,
+.header-cta {
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.nav-links a:hover {
+  color: var(--leaf-dark);
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  color: var(--white);
+  background: var(--leaf-dark);
+  font-weight: 700;
+  font-size: 14px;
+}
